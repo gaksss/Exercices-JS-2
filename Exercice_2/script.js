@@ -1,11 +1,8 @@
-const img = document.getElementById("image1");
-img.src = "./images/image1.jpg";
+const msg = document.getElementById("lastname")
 
-img.addEventListener("mouseenter", handleHoverImgIn);
-img.addEventListener("mouseout", handleHoverImgOut);
-function handleHoverImgIn(event) {
-  img.src = "./images/image1_2.jpg";
-}
-function handleHoverImgOut(event) {
-  img.src = "./images/image1.jpg";
+msg.addEventListener("blur", handleFocusOut);
+
+function handleFocusOut(event) {
+  alert("Merci de votre participation")
+  
 }
