@@ -1,11 +1,18 @@
-const img = document.getElementById("image1");
-img.src = "./images/image1.jpg";
+const elements = document.querySelectorAll("img");
 
-img.addEventListener("mouseenter", handleHoverImgIn);
-img.addEventListener("mouseout", handleHoverImgOut);
+elements.forEach((element) => {
+  element.addEventListener("mouseenter", handleHoverImgIn);
+  element.addEventListener("mouseout", handleHoverImgOut);
+ 
+});
 function handleHoverImgIn(event) {
-  img.src = "./images/image1_2.jpg";
+  elements[1].src = "./images/image1_2.jpg";
+  
 }
 function handleHoverImgOut(event) {
-  img.src = "./images/image1.jpg";
+  elements[0].src = "./images/image1.jpg";
+  elements[1].src = "./images/image2.jpg";
+  elements[2].src = "./images/image3.jpg";
+  elements[3].src = "./images/image4.jpg";
+  elements[4].src = "./images/image5.jpg";
 }
