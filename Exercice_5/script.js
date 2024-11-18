@@ -6,13 +6,14 @@ elements.forEach((element) => {
  
 });
 function handleHoverImgIn(event) {
-  elements[1].src = "./images/image1_2.jpg";
+  let element = event.target
+  element.src = "./images/"+ element.id +"_2.jpg";
+  
+  
+  
   
 }
 function handleHoverImgOut(event) {
-  elements[0].src = "./images/image1.jpg";
-  elements[1].src = "./images/image2.jpg";
-  elements[2].src = "./images/image3.jpg";
-  elements[3].src = "./images/image4.jpg";
-  elements[4].src = "./images/image5.jpg";
+  let element = event.target
+  element.src = "./images/"+ element.id +".jpg";
 }
