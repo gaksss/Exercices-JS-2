@@ -1,19 +1,14 @@
 const elements = document.querySelectorAll("img");
 
 elements.forEach((element) => {
-  element.addEventListener("mouseenter", handleHoverImgIn);
-  element.addEventListener("mouseout", handleHoverImgOut);
- 
+  element.addEventListener("mouseenter", handleHoverImg);
+  element.addEventListener("mouseout", handleHoverImg);
 });
-function handleHoverImgIn(event) {
-  let element = event.target
-  element.src = "./images/"+ element.id +"_2.jpg";
-  
-  
-  
-  
-}
-function handleHoverImgOut(event) {
-  let element = event.target
-  element.src = "./images/"+ element.id +".jpg";
+function handleHoverImg(event) {
+  let element = event.target;
+  if (event.type == "mouseenter") {
+    element.src = "./images/" + element.id + "_2.jpg";
+  } else {
+    element.src = "./images/" + element.id + ".jpg";
+  }
 }
