@@ -1,11 +1,17 @@
-const img = document.getElementById("image1");
-img.src = "./images/image1.jpg";
+const erase = document.querySelector("button");
+const lastname = document.getElementById("lastname");
+const firstname = document.getElementById("firstname");
+const city = document.getElementById("city");
 
-img.addEventListener("mouseenter", handleHoverImgIn);
-img.addEventListener("mouseout", handleHoverImgOut);
-function handleHoverImgIn(event) {
-  img.src = "./images/image1_2.jpg";
-}
-function handleHoverImgOut(event) {
-  img.src = "./images/image1.jpg";
+erase.addEventListener("click", handleClickedButton)
+
+
+function handleClickedButton(event) {
+  
+ 
+ lastname.value = "";
+ firstname.value = "";
+ city.value = "";
+ 
+ 
 }
